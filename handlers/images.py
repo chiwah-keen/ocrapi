@@ -17,7 +17,7 @@ class UploadImagesHandler(BaseHandler):
 
     def post(self):
         try:
-            upload_path = "/Users/datagrand/test/forabbyy/ocrapi/images"
+            upload_path = "/opt/ABBYY/FREngine11/Samples/SampleImages"
             file_metas = self.request.files.get('file', None)
             if not file_metas:
                 return self.send_status_message(-2, 'invalid file content or file name.')

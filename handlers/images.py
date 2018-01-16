@@ -22,18 +22,22 @@ class UploadImagesHandler(BaseHandler):
             if not file_metas:
                 return self.send_status_message(-2, 'invalid file content or file name.')
             meta = file_metas[0]
-            fname = str(uuid.uuid1()) + os.path.splitext(meta['filename'])[1]
-            with open(os.path.join(upload_path, fname), 'wb') as f:
+            uname_pfix = str(uuid.uuid1())
+            sfile = uname_pfix + os.path.splitext(meta['filename'])[1]  # 源文件
+            tfile = uname_pfix + '.pdf'  # 目标文件
+            with open(os.path.join(upload_path, sfile), 'wb') as f:
                 f.write(meta['body'])
                 f.flush()
             # 转化
-            os.system('cp /Users/datagrand/test/forabbyy/ocrapi/images/%s '
-                      '/Users/datagrand/test/forabbyy/ocrapi/images/%s ' % (fname, os.path.splitext(fname)[0]) + '.pdf')
-            if not os.path.isfile(os.path.join(upload_path, os.path.splitext(fname)[0] + '.pdf')):
-                self.send_status_message(-3, 'convert to pdf failed!')
+            if True:
+                self.log.info('start to convert to pdf %s %s ' % (sfile, tfile))
+                return
+            os.system("cd /opt/ABBYY/FREngine11/Samples/Java/Hello && sh run.sh %s %s" % (sfile, tfile))
+            if not os.path.isfile(os.path.join(upload_path, 'c_' + tfile)):
+                return self.send_status_message(-3, 'convert to pdf failed!')
             self.set_header('Content-Type', 'application/octet-stream')
-            self.set_header('Content-Disposition', 'attachment; filename='+os.path.splitext(fname)[0] + '.pdf')
-            with open(os.path.join(upload_path, os.path.splitext(fname)[0] + '.pdf'), 'rb') as f:
+            self.set_header('Content-Disposition', 'attachment; filename=' + tfile)
+            with open(os.path.join(upload_path, tfile), 'rb') as f:
                 while True:
                     data = f.read(2048)
                     if not data:

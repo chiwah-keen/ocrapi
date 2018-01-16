@@ -29,11 +29,10 @@ class UploadImagesHandler(BaseHandler):
                 f.write(meta['body'])
                 f.flush()
             # 转化
-            if True:
-                self.log.info('start to convert to pdf %s %s ' % (sfile, tfile))
-                return
+            self.log.info('start to convert to pdf %s %s ' % (sfile, tfile))
             os.system("cd /opt/ABBYY/FREngine11/Samples/Java/Hello && sh run.sh %s %s" % (sfile, tfile))
             if not os.path.isfile(os.path.join(upload_path, 'c_' + tfile)):
+                self.log.warning('convert to pdf failed..')
                 return self.send_status_message(-3, 'convert to pdf failed!')
             self.set_header('Content-Type', 'application/octet-stream')
             self.set_header('Content-Disposition', 'attachment; filename=' + tfile)

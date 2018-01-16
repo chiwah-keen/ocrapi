@@ -34,6 +34,7 @@ class UploadImagesHandler(BaseHandler):
             if not os.path.isfile(os.path.join(upload_path, tfile)):
                 self.log.warning('convert to pdf failed..')
                 return self.send_status_message(-3, 'convert to pdf failed!')
+            self.log.info('end to convert pdf start to download !')
             self.set_header('Content-Type', 'application/octet-stream')
             self.set_header('Content-Disposition', 'attachment; filename=' + tfile)
             with open(os.path.join(upload_path, tfile), 'rb') as f:

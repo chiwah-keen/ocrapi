@@ -4,8 +4,6 @@
 
 import sys
 import socket
-import torndb
-import redis
 from tornado import httpserver, ioloop
 from tornado import web
 from conf import config
@@ -15,7 +13,7 @@ reload(sys)
 sys.setdefaultencoding('utf-8')
 
 
-routes = [(r"/messages",   "handlers.messages.MessagesHandler"),
+routes = [(r"/uploadimg",   "handlers.images.UploadImagesHandler"),
           ]
 
 

@@ -24,14 +24,14 @@ class UploadImagesHandler(BaseHandler):
             meta = file_metas[0]
             uname_pfix = str(uuid.uuid1())
             sfile = uname_pfix + os.path.splitext(meta['filename'])[1]  # 源文件
-            tfile = uname_pfix + '.pdf'  # 目标文件
+            tfile = 'c_' + uname_pfix + '.pdf'  # 目标文件
             with open(os.path.join(upload_path, sfile), 'wb') as f:
                 f.write(meta['body'])
                 f.flush()
             # 转化
             self.log.info('start to convert to pdf %s %s ' % (sfile, tfile))
             os.system("cd /opt/ABBYY/FREngine11/Samples/Java/Hello && sh run.sh %s %s" % (sfile, tfile))
-            if not os.path.isfile(os.path.join(upload_path, 'c_' + tfile)):
+            if not os.path.isfile(os.path.join(upload_path, tfile)):
                 self.log.warning('convert to pdf failed..')
                 return self.send_status_message(-3, 'convert to pdf failed!')
             self.set_header('Content-Type', 'application/octet-stream')

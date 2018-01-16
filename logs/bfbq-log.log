@@ -1,0 +1,110 @@
+[INFO] 2018-01-15 19:47:21,898-base.py:24 {'status': 0, 'message': '', 'request_id': '1516016841898746'}
+[INFO] 2018-01-15 19:47:21,899-web.py:2063 200 GET /uploadimg (127.0.0.1) 1.68ms
+[WARNING] 2018-01-15 19:47:22,078-web.py:2063 404 GET /favicon.ico (127.0.0.1) 0.40ms
+[WARNING] 2018-01-15 19:47:30,861-web.py:2063 404 POST /file (127.0.0.1) 6.77ms
+[WARNING] 2018-01-15 19:47:59,536-web.py:2063 404 POST /file (127.0.0.1) 2.10ms
+[WARNING] 2018-01-15 19:48:24,144-web.py:2063 404 POST /file (127.0.0.1) 3.45ms
+[WARNING] 2018-01-15 19:48:47,096-web.py:2063 404 POST /file (127.0.0.1) 5.73ms
+[INFO] 2018-01-15 19:52:07,631-base.py:24 {'status': 0, 'message': '', 'request_id': '1516017127631422'}
+[INFO] 2018-01-15 19:52:07,632-web.py:2063 200 GET /uploadimg (127.0.0.1) 1.42ms
+[INFO] 2018-01-15 19:52:13,741-base.py:24 {'status': 0, 'message': '', 'request_id': '1516017133741852'}
+[ERROR] 2018-01-15 19:52:13,742-web.py:1590 Uncaught exception POST /uploadimg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9092', method='POST', uri='/uploadimg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:9092', 'Content-Length': '688017', 'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:9092', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://127.0.0.1:9092/uploadimg', 'Cache-Control': 'max-age=0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundaryd7mcpixES0NCPYov'})
+Traceback (most recent call last):
+  File "/Users/datagrand/test/env2/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 36, in post
+    with open(file_path, 'wb') as up:
+IOError: [Errno 2] No such file or directory: u'/Users/datagrand/test/forabbyy/ocrapi/handlers/files/2_02.png'
+[ERROR] 2018-01-15 19:52:13,746-web.py:2063 500 POST /uploadimg (127.0.0.1) 8.46ms
+[INFO] 2018-01-15 19:52:42,280-base.py:24 {'status': 0, 'message': '', 'request_id': '1516017162280483'}
+[INFO] 2018-01-15 19:52:42,281-web.py:2063 304 GET /uploadimg (127.0.0.1) 1.99ms
+[INFO] 2018-01-15 19:52:47,027-base.py:24 {'status': 0, 'message': '', 'request_id': '1516017167027957'}
+[ERROR] 2018-01-15 19:52:47,623-web.py:1590 Uncaught exception POST /uploadimg (127.0.0.1)
+HTTPServerRequest(protocol='http', host='127.0.0.1:9092', method='POST', uri='/uploadimg', version='HTTP/1.1', remote_ip='127.0.0.1', headers={'Origin': 'http://127.0.0.1:9092', 'Content-Length': '688017', 'Accept-Language': 'zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7', 'Accept-Encoding': 'gzip, deflate, br', 'Host': '127.0.0.1:9092', 'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8', 'Upgrade-Insecure-Requests': '1', 'Connection': 'keep-alive', 'Referer': 'http://127.0.0.1:9092/uploadimg', 'Cache-Control': 'max-age=0', 'User-Agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/63.0.3239.132 Safari/537.36', 'Content-Type': 'multipart/form-data; boundary=----WebKitFormBoundarye2oWJUkyXUnkBdHe'})
+Traceback (most recent call last):
+  File "/Users/datagrand/test/env2/lib/python2.7/site-packages/tornado/web.py", line 1509, in _execute
+    result = method(*self.path_args, **self.path_kwargs)
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 36, in post
+    with open(file_path, 'wb') as up:
+IOError: [Errno 2] No such file or directory: u'/Users/datagrand/test/forabbyy/ocrapi/handlers/files/2_02.png'
+[ERROR] 2018-01-15 19:52:47,628-web.py:2063 500 POST /uploadimg (127.0.0.1) 604.42ms
+[INFO] 2018-01-16 10:18:00,775-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069080775181'}
+[INFO] 2018-01-16 10:18:00,776-web.py:2063 200 GET /uploadimg (::1) 2.65ms
+[WARNING] 2018-01-16 10:18:01,010-web.py:2063 404 GET /favicon.ico (::1) 0.47ms
+[INFO] 2018-01-16 10:18:08,627-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069088627214'}
+[INFO] 2018-01-16 10:18:08,636-web.py:2063 200 POST /uploadimg (::1) 13.39ms
+[INFO] 2018-01-16 10:20:06,312-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069206312355'}
+[INFO] 2018-01-16 10:20:06,313-web.py:2063 200 GET /uploadimg (::1) 2.19ms
+[INFO] 2018-01-16 10:20:08,556-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069208556537'}
+[INFO] 2018-01-16 10:20:08,558-web.py:2063 200 POST /uploadimg (::1) 11.20ms
+[INFO] 2018-01-16 10:21:16,577-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069276577071'}
+[INFO] 2018-01-16 10:21:16,577-web.py:2063 200 GET /uploadimg (::1) 3.19ms
+[INFO] 2018-01-16 10:21:17,866-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069277866696'}
+[ERROR] 2018-01-16 10:21:17,867-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 22, in post
+    with open(os.path.join(upload_path, '123.png'), 'wb') as f:
+IOError: [Errno 20] Not a directory: '/Users/datagrand/test/forabbyy/ocrapi/handlers/images/123.png'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 22, in post
+    with open(os.path.join(upload_path, '123.png'), 'wb') as f:
+IOError: [Errno 20] Not a directory: '/Users/datagrand/test/forabbyy/ocrapi/handlers/images/123.png'
+[INFO] 2018-01-16 10:21:17,868-web.py:2063 200 POST /uploadimg (::1) 10.35ms
+[INFO] 2018-01-16 10:23:07,782-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069387782335'}
+[ERROR] 2018-01-16 10:23:07,785-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 21, in post
+    with open(os.path.join(upload_path, meta['filename'].strip()), 'wb') as f:
+IOError: [Errno 20] Not a directory: u'/Users/datagrand/test/forabbyy/ocrapi/handlers/images/2_02.png'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 21, in post
+    with open(os.path.join(upload_path, meta['filename'].strip()), 'wb') as f:
+IOError: [Errno 20] Not a directory: u'/Users/datagrand/test/forabbyy/ocrapi/handlers/images/2_02.png'
+[INFO] 2018-01-16 10:23:07,787-web.py:2063 200 POST /uploadimg (127.0.0.1) 12.67ms
+[INFO] 2018-01-16 10:23:35,579-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069415579862'}
+[INFO] 2018-01-16 10:23:35,580-web.py:2063 200 GET /uploadimg (127.0.0.1) 3.23ms
+[INFO] 2018-01-16 10:23:37,055-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069417055005'}
+[INFO] 2018-01-16 10:23:37,056-web.py:2063 200 POST /uploadimg (127.0.0.1) 21.16ms
+[INFO] 2018-01-16 10:30:47,597-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069847597129'}
+[INFO] 2018-01-16 10:30:47,597-web.py:2063 200 GET /uploadimg (::1) 1.88ms
+[INFO] 2018-01-16 10:30:49,707-base.py:24 {'status': 0, 'message': '', 'request_id': '1516069849707195'}
+[ERROR] 2018-01-16 10:30:49,722-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 27, in post
+    with open(os.path.join(upload_path, '123.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: '/Users/datagrand/test/forabbyy/ocrapi/images/123.pdf'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 27, in post
+    with open(os.path.join(upload_path, '123.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: '/Users/datagrand/test/forabbyy/ocrapi/images/123.pdf'
+[INFO] 2018-01-16 10:30:49,723-web.py:2063 200 POST /uploadimg (::1) 51.19ms
+[INFO] 2018-01-16 10:33:43,825-base.py:24 {'status': 0, 'message': '', 'request_id': '1516070023825081'}
+[ERROR] 2018-01-16 10:33:43,843-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 21, in post
+    fname = str(uuid.uuid1()) + meta['filename'].splitext()[1]
+AttributeError: 'unicode' object has no attribute 'splitext'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 21, in post
+    fname = str(uuid.uuid1()) + meta['filename'].splitext()[1]
+AttributeError: 'unicode' object has no attribute 'splitext'
+[INFO] 2018-01-16 10:33:43,843-web.py:2063 200 POST /uploadimg (::1) 47.46ms
+[INFO] 2018-01-16 10:35:42,554-base.py:24 {'status': 0, 'message': '', 'request_id': '1516070142554313'}
+[INFO] 2018-01-16 10:35:42,555-web.py:2063 200 GET /uploadimg (::1) 3.62ms
+[INFO] 2018-01-16 10:35:43,344-base.py:24 {'status': 0, 'message': '', 'request_id': '1516070143344744'}
+[ERROR] 2018-01-16 10:35:43,359-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 29, in post
+    with open(os.path.join(upload_path, '123.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: '/Users/datagrand/test/forabbyy/ocrapi/images/123.pdf'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 29, in post
+    with open(os.path.join(upload_path, '123.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: '/Users/datagrand/test/forabbyy/ocrapi/images/123.pdf'
+[INFO] 2018-01-16 10:35:43,360-web.py:2063 200 POST /uploadimg (::1) 25.16ms
+[INFO] 2018-01-16 10:41:34,025-base.py:24 {'status': 0, 'message': '', 'request_id': '1516070494025207'}
+[ERROR] 2018-01-16 10:41:34,069-log.py:92 Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 32, in post
+    with open(os.path.join(upload_path, os.path.splitext(fname)[0] + '.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: u'/Users/datagrand/test/forabbyy/ocrapi/images/c4037899-fa66-11e7-8081-784f4371c1d1.pdf'
+Traceback (most recent call last):
+  File "/Users/datagrand/test/forabbyy/ocrapi/handlers/images.py", line 32, in post
+    with open(os.path.join(upload_path, os.path.splitext(fname)[0] + '.pdf'), 'rb') as f:
+IOError: [Errno 2] No such file or directory: u'/Users/datagrand/test/forabbyy/ocrapi/images/c4037899-fa66-11e7-8081-784f4371c1d1.pdf'
+[INFO] 2018-01-16 10:41:34,069-web.py:2063 200 POST /uploadimg (::1) 50.42ms

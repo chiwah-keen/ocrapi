@@ -24,6 +24,18 @@ conf_dict = load_global_conf()
 
 LISTEN_PORT = 9092
 
+UPLOADPAGE = '''
+            <html>
+              <head><title>Upload File</title></head>
+              <body>
+                   <form action='/uploadimg' enctype="multipart/form-data" method='post'>
+                   <input type='file' name='file'/><br/>
+                   <input type='submit' value='submit'/>
+                   </form>
+              </body>
+            </html>
+            '''
+
 settings = {
     'template_path': os.path.join('', 'templates')
 }

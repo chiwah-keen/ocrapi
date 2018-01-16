@@ -9,7 +9,11 @@ from base import BaseHandler
 
 class UploadImagesHandler(BaseHandler):
     def get(self):
-        self.write(config.UPLOADPAGE)
+        try:
+            self.write(config.UPLOADPAGE)
+        except Exception as e:
+            self.send_status_message(-3, traceback.format_exc())
+            self.log.error(traceback.format_exc())
 
     def post(self):
         try:
